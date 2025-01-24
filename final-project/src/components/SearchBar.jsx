@@ -8,7 +8,7 @@ function SearchBar() {
     const [results, setResults] = useState([]);
 
     const handleSearch = () => {
-        axios.get(`Steamplace=${query}`)
+        axios.get(`api.gamalytic.com/${query}`)
         .then((res) => setResults(res.data))
         .catch((err) => console.error('No results found:', err))
     };
