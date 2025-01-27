@@ -1,0 +1,25 @@
+
+.page-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-main{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.saved-items-main{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
