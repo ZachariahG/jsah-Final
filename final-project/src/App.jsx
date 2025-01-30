@@ -1,22 +1,35 @@
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/NavBar';
 import React from 'react';
 import './App.css';
 import Header from './components/PageHeader';
 import Footer from './components/PageFooter';
 import CartPage from './pages/Cart';
-import Home from './pages/Home';
+import HomePage from './pages/Home';
 
 
-function App() {
+
+const App = () => {
   return (
     <div className='App'>
       <Header/>
-      <main className="App-content">
-        <Home />
-      </main>
+      <CartPage/>
       <Footer/>
     </div>
   )
 }
 
 export default App
+
+// const App = () => (
+//   <Router>
+//     <Navbar/>
+
+//     <Routes>
+//       <Route path="/" element={<HomePage />}/>
+//       <Route path="/saved-items" element={<SavedItemsPage />}/>
+//       <Route path="/cart" element={<CartPage />}/>
+//     </Routes>
+//   </Router>
+// )

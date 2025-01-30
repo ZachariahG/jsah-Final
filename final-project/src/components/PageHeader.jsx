@@ -9,9 +9,11 @@ function Header () {
     return (
         <header className="header">
             <img className="logo" src={logo} alt="Logo" />
-            <SearchBar/>
-            
-            <p className="cart">Cart goes here</p>
+            <div className="header-nav">
+                <p className="sort-box">Sort goes here</p>
+                <SearchBar/>
+                <p className="cart">Cart goes here</p>
+            </div>
         </header>
     )
 };
