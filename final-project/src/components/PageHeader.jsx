@@ -10,7 +10,7 @@ function Header () {
         <header className="header">
             <img className="logo" src={logo} alt="Logo" />
             <SearchBar/>
-            <NavBar/>
+            
             <p className="cart">Cart goes here</p>
         </header>
     )
