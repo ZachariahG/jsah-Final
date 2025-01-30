@@ -1,25 +1,30 @@
 
 import React from "react";
-import logo from '/src/images/logo.png';
 import './styles/PageHeader.css';
 import SearchBar from "./SearchBar";
-import NavBar from "./NavBar";
+import HomeButton from "./Home-Button";
+import CartButton from "./Cart-Button";
+
 
 function Header () {
     return (
         <header className="header">
-            <img className="logo" src={logo} alt="Logo" />
             <div className="header-nav">
-                <p className="sort-box">Sort goes here</p>
-                <SearchBar/>
-                <p className="cart">Cart goes here</p>
+                
+                
+                <HomeButton/>
+                
+                <div className="search-bar">
+                    <SearchBar/>
+                </div>
+                
+                <CartButton/>
             </div>
         </header>
     )
 };
 
 export default Header;
-
 
 
 
