@@ -3,16 +3,15 @@ import React from "react";
 import logo from '/src/images/logo.png';
 import './styles/PageHeader.css';
 import SearchBar from "./SearchBar";
+import NavBar from "./NavBar";
 
 function Header () {
     return (
         <header className="header">
             <img className="logo" src={logo} alt="Logo" />
-            <div className="header-nav">
-                <p className="sort-box">Sort goes here</p>
-                <SearchBar/>
-                <p className="cart">Cart goes here</p>
-            </div>
+            <SearchBar/>
+            <NavBar/>
+            <p className="cart">Cart goes here</p>
         </header>
     )
 };
