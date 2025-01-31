@@ -10,7 +10,7 @@ const HomePage = () => {
             <Header/>
             <br />
             
-            <h1>It's GAME TIME</h1>
+            <h1>Home Page</h1>
 
             <div className="page-body">
                 <div className="game-main">
