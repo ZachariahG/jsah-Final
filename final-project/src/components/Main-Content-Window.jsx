@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import ProductList from "./buttons/Add-To-Cart-Button";
 
 
 function MainContentDisplayWindow() {
@@ -55,7 +56,7 @@ function MainContentDisplayWindow() {
             </div>
 
             <div className="content-buttons">
-                <div className="add-to-cart-button">Add to cart button</div>
+                <ProductList />
                 <div className="save-for-later-button">Save for later button</div>
                 <div className="remove-from-cart-button">Remove from cart button</div>
             </div>
