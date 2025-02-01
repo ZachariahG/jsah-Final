@@ -10,9 +10,9 @@ const HomePage = () => {
     return (
         <div>
             <Header/>
+            <h1>Home</h1>
             <br />
             <div className="main-content">
-                <MainContentDisplayWindow />
                 <MainContentDisplayWindow />
                 <MainContentDisplayWindow />
                 <MainContentDisplayWindow />

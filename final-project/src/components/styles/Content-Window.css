@@ -1,6 +1,7 @@
 
-.content-display-window{
-    border: 1px solid blue;
+.content-body {
+    margin-bottom: 20px;
+    border: 1px solid blueviolet;
 }
 
 

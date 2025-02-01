@@ -1,0 +1,7 @@
+.product-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid orange;
+    
+}
