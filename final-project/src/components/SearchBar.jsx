@@ -8,7 +8,8 @@ function SearchBar() {
     const [results, setResults] = useState([]);
 
     const handleSearch = () => {
-        axios.get(`api.gamalytic.com/${query}`)
+        e.preventDefault();
+        axios.get(`http://api.gamalytic.com/game/search?name=${query}`)
         .then((res) => setResults(res.data))
         .catch((err) => console.error('No results found:', err))
     };
@@ -33,4 +34,4 @@ function SearchBar() {
     
 };
 
-export default SearchBar;
+export default SearchBar; 

@@ -41,7 +41,8 @@ function MainContentDisplayWindow() {
             </div>
 
             <div className="content-main">
-                <h1>Game Img Goes Here</h1> 
+                <h1>Game Img Goes Here</h1>
+
             </div>
 
             <div className="content-details">
