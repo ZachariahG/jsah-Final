@@ -5,6 +5,7 @@ import './styles/PageFooter.css';
 function Footer () {
     return (
         <footer className="footer">
+            <p>&copy; {new Date().getFullYear()}</p>
             <p>Privacy Policy</p>
             <p>Legal</p>
             <p>Cookies</p>
