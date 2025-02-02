@@ -5,7 +5,7 @@ import '../styles/Saved-Items.css';
 function SavedItemsButton() {
   return (
     <Link to="/saved-items">
-      <a href="#" id="numbers" className="nav-link nav-item">Saved</a>
+      <a href="#" id="savedItems" className="nav-link nav-item">Saved</a>
     </Link>
   );
 }

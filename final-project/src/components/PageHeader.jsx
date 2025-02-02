@@ -12,8 +12,10 @@ function PageHeader () {
         <header className="header">
             <nav className="header-nav">
                 <HomeButton/>
-                <SavedItemsButton/>
-                <CartButton/>
+                <div className="links">
+                    <SavedItemsButton/>
+                    <CartButton/>
+                </div>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
