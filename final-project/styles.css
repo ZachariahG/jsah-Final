@@ -12,8 +12,15 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    background-color: #f8f9fa; /* Light gray background */
-    color: #333; /* Dark text color */
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(34, 21, 51);
+    background-size: 40px 40px; /* Grid cell size */
+    background-image: 
+          linear-gradient(to right, hsla(16, 100%, 50%, 0.4) 1px, transparent 1px),
+          linear-gradient(to bottom, hsla(16, 100%, 50%, 0.4) 1px, transparent 1px);
+   /* Light gray background */
+    color: whitesmoke;
     line-height: 1.5;
   }
 

@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import ProductList from "./buttons/Add-To-Cart-Button";
+import './styles/Content-window.css';
 
 
 function MainContentDisplayWindow() {
@@ -30,7 +32,31 @@ function MainContentDisplayWindow() {
 
     // If data is still loading, show a loading state
     if (!gameData) {
-        return <div>Loading...</div>;
+        return <div className="content-body">
+        <div className="content-title">
+            <h1>Loading...</h1> {/* Display name from Twitch API */}
+        </div>
+
+        <div className="content-main">
+            <h1>Img</h1> 
+        </div>
+
+        <div className="content-details">
+            <div className="content-summary">
+                
+            </div>
+
+            <div className="content-price">
+                
+            </div>
+        </div>
+
+        <div className="content-buttons">
+            <ProductList />
+            <div className="save-for-later-button">Save for later button</div>
+            <div className="remove-from-cart-button">Remove from cart button</div>
+        </div>
+    </div>;
     }
 
     // Assuming you get some data from Twitch API, here's an example rendering
@@ -56,7 +82,7 @@ function MainContentDisplayWindow() {
             </div>
 
             <div className="content-buttons">
-                <div className="add-to-cart-button">Add to cart button</div>
+                <ProductList />
                 <div className="save-for-later-button">Save for later button</div>
                 <div className="remove-from-cart-button">Remove from cart button</div>
             </div>

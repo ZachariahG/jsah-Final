@@ -10,18 +10,18 @@ import SavedItemsButton from "./buttons/Saved-Items-Button";
 function PageHeader () {
     return (
         <header className="header">
-            <div className="header-nav">
-                
-                
+            <nav className="header-nav">
                 <HomeButton/>
-                
-                <div className="search-bar">
-                    <SearchBar/>
-                </div>
-                
                 <SavedItemsButton/>
-
                 <CartButton/>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            <div className="search-bar">
+                    <SearchBar/>
             </div>
         </header>
     )

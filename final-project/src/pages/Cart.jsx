@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../components/PageHeader";
 import Footer from "../components/PageFooter";
 import MainContentDisplayWindow from "../components/Main-Content-Window";
+import '../components/styles/Cart.css';
 
 
 const CartPage = () => {
@@ -15,8 +16,7 @@ const CartPage = () => {
 
             <div className="page-body">
                 <div className="cart-main">
-                    
-                    <div>
+                    <div className="content-container">
                         <MainContentDisplayWindow/>
                         <MainContentDisplayWindow/>
                         <MainContentDisplayWindow/>

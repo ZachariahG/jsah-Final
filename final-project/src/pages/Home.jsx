@@ -1,32 +1,23 @@
 
 import React from "react";
-import Header from "../components/PageHeader";
-import Footer from "../components/PageFooter";
+import PageHeader from "../components/PageHeader";
+import PageFooter from "../components/PageFooter";
 import '../components/styles/Home.css'
+import MainContentDisplayWindow from "../components/Main-Content-Window";
 
 
 const HomePage = () => {
     return (
         <div>
-            <Header/>
+            <PageHeader/>
+            <h1>Home</h1>
             <br />
             <div className="main-content">
-                <h1>Home Page</h1>
-
-                <div className="page-body">
-                   <div className="game-main">
-                    <div className="game-display-window">Game-display</div>
-                    <div className="game-display-window">Game-display</div>
-                    <div className="game-display-window">Game-display</div>
-                   </div>
-                <div className="recently-purchased-main">
-                    <div className="recently-purchased-window">recently-purchased-display</div>
-                    <div className="recently-purchased-window">recently-purchased-display</div>
-                    <div className="recently-purchased-window">recently-purchased-display</div>
-                </div>
-              </div>
+                <MainContentDisplayWindow />
+                <MainContentDisplayWindow />
+                <MainContentDisplayWindow />
             </div>
-            <Footer/>
+            <PageFooter/>
         </div>
     )
 };

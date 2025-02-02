@@ -1,6 +1,7 @@
 
 // This is just filler info till we have the API in place
 import React, { useState } from 'react';
+import '../styles/addToCart.css';
 
 function ProductList() {
   const [cart, setCart] = useState([]);
@@ -16,7 +17,7 @@ function ProductList() {
   };
 
   return (
-    <div>
+    <div className='product-display'>
       {products.map((product) => (
         <div key={product.id}>
           <h2>{product.name}</h2>

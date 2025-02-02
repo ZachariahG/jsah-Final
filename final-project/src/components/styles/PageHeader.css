@@ -5,7 +5,7 @@
     color: white;
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 5px;
     justify-content: space-between;
     border: 1px solid black;
@@ -19,7 +19,7 @@
     padding-right: 15px;
     border: 1px solid purple;
     align-items: center;
-    background-color: rgb(34, 21, 51);
+    background-color: rgba(34, 21, 51, 0.8);
 }
 
 .search-bar{
@@ -27,24 +27,59 @@
   flex-direction: column;
 }
 
-.logo {
-    height: 10em;
-    background-image:url(/final-project/src/images/Logo.png) ;
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-    position: relative;
-    left: auto;
-  }
+a {
+  color: rgb(252, 74, 142);
+  text-decoration: none;
+}
 
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
+.hamburger {
+  display: block;
+}
 
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
+.bar {
+  display: block;
+  width: 36px;
+  height: 6px;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(252, 74, 127);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  
+}
+
+/* Desktop Styles
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  border: 1px solid rgb(253, 5, 5)
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+} */
+
+
 
 
 

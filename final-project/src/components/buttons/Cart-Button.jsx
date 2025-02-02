@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function CartButton() {
   return (
     <Link to="/cart">
-      <button>CartButton</button>
+      <a href="#" id="letters" className="nav-link nav-item">Cart</a>
     </Link>
   );
 }

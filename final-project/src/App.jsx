@@ -4,7 +4,7 @@ import './App.css';
 import CartPage from './pages/Cart';
 import HomePage from './pages/Home';
 import SavedItemsPage from './pages/Saved-Items';  
-import Navbar from './components/Navbar';        
+        
 
 const App = () => (
   <Router>
