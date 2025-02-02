@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-//game title, image, summary, price, avg player count
 
 function SearchBar() {
+    const { name } = useParams<{name: string}>('');
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
 
     const handleSearch = () => {
         e.preventDefault();
-        axios.get(`http://api.gamalytic.com/game/search?name=${query}`)
+        axios.get(`https://api.twitch.tv/helix/games?${name}`)
         .then((res) => setResults(res.data))
         .catch((err) => console.error('No results found:', err))
     };
@@ -25,9 +27,8 @@ function SearchBar() {
         <button onClick={handleSearch}>Search</button>
 
         <ul> 
-            {results.map((game) =>
-            <li key={game.steamId}>{game.name}--{game.description}--{game.image}--{game.price}--{game.players}</li>
-            )}
+            {results.map((games) =>
+            <li key={games.id}>{games.name}--{games.box_art_url || "Image Unavailable"}--<Link to={`https://igbd.com/${games.name}`} /> </li>)}
         </ul>
         </div>
     )
