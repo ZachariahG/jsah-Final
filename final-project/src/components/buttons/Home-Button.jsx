@@ -6,7 +6,7 @@ import '../styles/Home-Button.css';
 function HomeButton() {
   return (
     <Link to="/">
-      <a href="#"><img src={Logo} /></a>
+      <img className="logo" src={Logo} />
     </Link>
   );
 }

@@ -2,7 +2,7 @@
 import React from "react";
 import './styles/PageFooter.css';
 
-function Footer () {
+function PageFooter () {
     return (
         <footer className="footer">
             <p>&copy; {new Date().getFullYear()}</p>
@@ -14,7 +14,7 @@ function Footer () {
     )
 }
 
-export default Footer;
+export default PageFooter;
 
 
 

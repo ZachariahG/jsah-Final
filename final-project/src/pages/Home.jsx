@@ -1,7 +1,7 @@
 
 import React from "react";
-import Header from "../components/PageHeader";
-import Footer from "../components/PageFooter";
+import PageHeader from "../components/PageHeader";
+import PageFooter from "../components/PageFooter";
 import '../components/styles/Home.css'
 import MainContentDisplayWindow from "../components/Main-Content-Window";
 
@@ -9,7 +9,7 @@ import MainContentDisplayWindow from "../components/Main-Content-Window";
 const HomePage = () => {
     return (
         <div>
-            <Header/>
+            <PageHeader/>
             <h1>Home</h1>
             <br />
             <div className="main-content">
@@ -17,7 +17,7 @@ const HomePage = () => {
                 <MainContentDisplayWindow />
                 <MainContentDisplayWindow />
             </div>
-            <Footer/>
+            <PageFooter/>
         </div>
     )
 };
