@@ -1,10 +1,12 @@
 
 import { Link } from 'react-router-dom';
+import Logo from "../../images/Logo.png";
+import '../styles/Home-Button.css';
 
 function HomeButton() {
   return (
     <Link to="/">
-      <button>Home</button>
+      <a href="#"><img src={Logo} /></a>
     </Link>
   );
 }
