@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 function SearchBar() {
-    const { name } = useParams<{name: string}>('');
+    // const { name } = useParams<{name: string}>('');
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
 

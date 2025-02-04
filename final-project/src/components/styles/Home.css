@@ -1,4 +1,4 @@
-
+@media only screen and (max-width: 700px) {  /* This is the MOBILE version */
 
 .main-content {
     /* border: 1px solid hsl(16, 100%, 50%); */
@@ -6,4 +6,11 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    
   }
+}
+
+@media only screen and (min-width: 701px) {  /* This is the MOBILE version */
+
+
+}
