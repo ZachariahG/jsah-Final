@@ -6,6 +6,7 @@ import '../components/styles/Home.css'
 import MainContentDisplayWindow from "../components/Main-Content-Window";
 
 
+
 const HomePage = () => {
     return (
         <div>
