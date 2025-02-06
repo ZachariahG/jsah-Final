@@ -94,6 +94,37 @@ a {
   transition: ease-out 0.2s;
 }
 
+/* Search Bar Styles */
+.search-bar {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.search-bar button {
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 5px;
+  background-color: rgb(80, 190, 233);
+  color: rgb(252, 252, 252);
+  border-top: 1px solid rgb(255, 28, 122);
+  border-left: 1px solid rgb(255, 28, 122);
+  background: linear-gradient(135deg, rgb(80, 190, 233), rgb(255, 28, 122));
+  border-bottom: 1px solid rgb(80, 190, 233);
+  border-right: 1px solid rgb(80, 190, 233);
+  transition: ease-out 0.3s;
+}
+
+.search-bar button:hover {
+  font-size: 1.2em;
+  padding: 9px;
+}
+
+.search-bar input {
+  height: 100%;
+  flex: 1;
+}
 /* Desktop Styles
 
 .hamburger {

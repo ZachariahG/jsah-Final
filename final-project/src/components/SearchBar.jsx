@@ -181,7 +181,7 @@ function SearchBar() {
   };
  
   return (
-    <div>
+    <div className="search-bar-parent">
       <input
         type="text"
         maxLength={40}
