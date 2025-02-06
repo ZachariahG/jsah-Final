@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 
 function SearchBar() {
-    // const { name } = useParams<{name: string}>('');
+    
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
 
     const handleSearch = () => {
         e.preventDefault();
-        axios.get(`https://api.twitch.tv/helix/games?${name}`)
+        axios.get(`https://api.twitch.tv/helix/games?${query}`)
         .then((res) => setResults(res.data))
         .catch((err) => console.error('No results found:', err))
     };

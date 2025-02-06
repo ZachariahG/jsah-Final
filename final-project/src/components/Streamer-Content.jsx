@@ -44,7 +44,7 @@ const TwitchRandomStreamer = () => {
           Authorization: `Bearer ${accessToken}`,
         },
         params: {
-          first: 1, // Get 1 live streamer
+          first: 10, // Get 10 live streamer
         },
       });
 
@@ -94,7 +94,7 @@ const TwitchRandomStreamer = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-900 text-white">
+    <div className="steamer-content">
         <h1> Watch Live </h1>
 
         <button
@@ -108,7 +108,7 @@ const TwitchRandomStreamer = () => {
 
         {randomStreamer && (
         <div className="stream">
-            <div className="live-preview"
+            <img className="live-preview"
             src={getThumbnailUrl(randomStreamer.thumbnail_url)}
             width="500"
             height="500"
@@ -116,9 +116,9 @@ const TwitchRandomStreamer = () => {
             allowFullScreen
             >
 
-            </div>
+            </img>
 
-            <h2 className="text-xl font-semibold">{randomStreamer.user_name}</h2>
+            <h2 className="stream-description">{randomStreamer.user_name}</h2>
             <p>Currently streaming: {randomStreamer.game_name}</p>
             <p>Viewers: {randomStreamer.viewer_count}</p>
             <a
@@ -133,22 +133,8 @@ const TwitchRandomStreamer = () => {
       )}
 
       {randomVideo && (
-        <div className="mt-6 border p-4 rounded-lg bg-gray-800">
-          <h2> Random Video</h2>
+        <div className="stream-title">
           <p>{randomVideo.title}</p>
-          <img
-            src={getThumbnailUrl(randomVideo.thumbnail_url)} // Get the thumbnail URL
-            alt="Twitch Video Thumbnail"
-            className="rounded-lg"
-          />
-          <a
-            href={randomVideo.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-purple-400 underline mt-2 block"
-          >
-            Watch Video
-          </a>
         </div>
       )}
     </div>
