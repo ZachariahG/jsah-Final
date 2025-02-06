@@ -20,8 +20,9 @@ function ProductList() {
     <div className='product-display'>
       {products.map((product) => (
         <div key={product.id}>
-          <h2>{product.name}</h2>
+          <h2>{product.title}</h2>
           <p>${product.price}</p>
+          <p>{product.image}</p>
           <button onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
       ))}
