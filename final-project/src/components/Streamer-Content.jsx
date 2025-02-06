@@ -240,7 +240,7 @@ const TwitchRandomStreamer = () => {
   };
  
   return (
-    <div className="p-6 bg-gray-900 text-white">
+    <div className="steamer-content">
         <h1> Watch Live </h1>
         <button onClick={fetchRandomStreamer} className="random-streamer-button">
           Get Random Streamer
