@@ -1,33 +1,48 @@
 
-// This is just filler info till we have the API in place
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/addToCart.css';
 
-function ProductList() {
-  const [cart, setCart] = useState([]);
+const FetchProducts = () => {
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState('');
 
-  const products = [
-    { id: 1, name: 'Product 1', price: 10 },
-    { id: 2, name: 'Product 2', price: 15 },
-    // ... more products
-  ];
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('https://fakestoreapi.com/products?limit=1');
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+        setError("Failed to fetch products.");
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    // Add your add to cart logic here
+    console.log(`Added ${product.title} to cart`);
   };
 
   return (
     <div className='product-display'>
+      {error && <p>{error}</p>}
       {products.map((product) => (
         <div key={product.id}>
           <h2>{product.title}</h2>
+          <img src={product.image} alt={product.title} />
           <p>${product.price}</p>
-          <p>{product.image}</p>
           <button onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
       ))}
     </div>
   );
-}
+};
 
-export default ProductList;
+export default FetchProducts;
+
+  
+
+
