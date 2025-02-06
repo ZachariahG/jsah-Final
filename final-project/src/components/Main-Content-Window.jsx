@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import ProductList from "./buttons/Add-To-Cart-Button";
-import './styles/Content-window.css';
+import './styles/Content-Window.css';
 import TwitchRandomStreamer from "./Streamer-Content";
 
 
