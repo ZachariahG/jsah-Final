@@ -5,8 +5,8 @@
     width: 100%;
 }
 
-.nav-link:hover {
-    font-size: 2rem;
-    color: rgb(64, 255, 47);
+#hidden {
+    border: none;
 }
+
 

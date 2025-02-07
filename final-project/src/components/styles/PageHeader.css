@@ -27,10 +27,10 @@
 
 
 a {
-  color: rgb(255, 28, 122);
+  color: white;
   text-decoration: none;
-  border-top: 1px solid rgb(255, 28, 122);
-  border-bottom: 1px solid rgb(255, 28, 122);
+  /* border-top: 1px solid rgb(255, 28, 122);
+  border-bottom: 1px solid rgb(255, 28, 122); */
   padding: 5px;
   width: 100%;
   text-align: left;
@@ -66,9 +66,18 @@ a {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
 }
+
+.menu a {
+  background-color: rgb(54, 130, 160);
+  border-bottom: 1px solid rgba(34, 21, 51)
+}
+
+
+
+
 
 /* --------- Sliding Menu ---------- */
 .hidden {
@@ -119,10 +128,11 @@ a {
   transition: ease-out 0.3s;
 }
 
-.search-bar button:hover {
+/* Desktop */
+/* .search-bar button:hover {
   font-size: 1.2em;
   padding: 9px;
-}
+} */
 
 .search-bar input {
   height: 100%;
