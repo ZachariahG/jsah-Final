@@ -17,6 +17,7 @@ const HomePage = () => {
                 <MainContentDisplayWindow />
                 <MainContentDisplayWindow />
                 <MainContentDisplayWindow />
+                <MainContentDisplayWindow />
             </div>
             <PageFooter/>
         </div>

@@ -1,10 +1,12 @@
 
 import { Link } from 'react-router-dom';
+import '../styles/Cart-Button.css';
+
 
 function CartButton() {
   return (
     <Link to="/cart">
-      <a href="#" id="letters" className="nav-link nav-item">Cart</a>
+      <a href="#" id="hidden" className="nav-link nav-item">Cart</a>
     </Link>
   );
 }
