@@ -1,55 +1,55 @@
 import { REACTIONS } from "../components/Emojis";
-import dotenv from 'dotenv';
+import {MongoClient} from 'mongodb';
 
-const uri = MONGODB_URI;
+const uri = import.meta.env.MONGODB_URI;
 const client = new MongoClient(uri);
 await client.connect();
 
-const database = client.db('Emojis');
+const database = client.db("Emojis");
 
 export default async function addPostReaction(req, res) {
-    const {
-      query: { id: postId },
-    } = req;
-  
-    const clientReactions = req.body;
-  
-    try {
-      // Integrate with MongoDB
-      
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify(postDoc?.reactions || {}));
-    } catch (e) {
-      console.error('Error saving reactions', e);
-  
-      res.statusCode = 500;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({}));
-    }
-  }
+  const {
+    query: { id: postId },
+  } = req;
 
-  const postId = req.query.id;
+  const clientReactions = req.body;
+
+  try {
+    // Integrate with MongoDB
+
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify(postDoc?.reactions || {}));
+  } catch (e) {
+    console.error("Error saving reactions", e);
+
+    res.statusCode = 500;
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({}));
+  }
+}
+
+const postId = req.query.id;
 const inputReactions = req.body;
 
-const posts = database.collection('posts');
+const posts = database.collection("posts");
 
-const validInputReactions = Object.entries(clientReactions)
-  .filter(([reactionKey]) => {
+const validInputReactions = Object.entries(clientReactions).filter(
+  ([reactionKey]) => {
     return Object.prototype.hasOwnProperty.call(REACTIONS, reactionKey);
-  });
-  
+  }
+);
+
 const mutations = Object.fromEntries(
-  validReactions.map(([key, value]) => ['reactions.' + key, value])
+  validReactions.map(([key, value]) => ["reactions." + key, value])
 );
 
 if (!Object.keys(mutations).length) {
-  console.error('Reactions mutations was invalid.');
-  
+  console.error("Reactions mutations was invalid.");
+
   res.statusCode = 500;
-  res.setHeader('Content-Type', 'application/json');
+  res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify({}));
-  return;
 }
 
 const postDoc = await posts.findOneAndUpdate(
@@ -59,5 +59,5 @@ const postDoc = await posts.findOneAndUpdate(
 );
 
 res.statusCode = 200;
-res.setHeader('Content-Type', 'application/json');
+res.setHeader("Content-Type", "application/json");
 res.end(JSON.stringify(postDoc.reactions || {}));
