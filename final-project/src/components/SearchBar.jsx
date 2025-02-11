@@ -176,7 +176,7 @@ function SearchBar() {
       }
     } catch (error) {
       console.error("Error fetching game data:", error);
-      setError("Failed to fetch game data.");
+      setError("Please enter the name of a game.");
     }
   };
  

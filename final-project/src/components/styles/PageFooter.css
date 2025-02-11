@@ -1,4 +1,19 @@
 
+@media screen and (min-width: 700px) {
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        border: 3px solid white;
+        justify-content: space-between;
+        padding-left: 8%;
+        padding-right: 8%;
+        width: 100%;
+        bottom: 0;
+    }
+}
+
+
 .footer{
     display: flex;
     flex-direction: row;

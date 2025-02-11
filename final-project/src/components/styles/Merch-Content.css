@@ -1,4 +1,5 @@
 
+
 .product-display button {
         padding: 6px;
         cursor: pointer;
@@ -14,4 +15,5 @@
         border-left: 2px solid rgb(80, 190, 233);
         transition: ease-out 0.3s;
 }
+
 
