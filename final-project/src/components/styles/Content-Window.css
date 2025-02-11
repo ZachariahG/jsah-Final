@@ -1,6 +1,7 @@
 
 
 
+
 /* This is for mobile */
 @media screen and (max-width: 700px) {
     .content-body {
@@ -19,6 +20,17 @@
         word-wrap: break-word;
     } */
     
+
+.content-body {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(80, 190, 233);
+    border-right: 1px solid rgb(80, 190, 233);
+    border-top: 1px solid rgb(255, 28, 122);
+    border-left: 1px solid rgb(255, 28, 122);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    background: linear-gradient(135deg, rgb(80, 190, 233), rgb(255, 28, 122));
 }
 
 /* This is for Desktop */

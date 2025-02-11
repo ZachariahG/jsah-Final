@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -29,6 +30,25 @@ const FetchProducts = () => {
   };
 
   return (
+
+import React from "react";
+import axios from "axios";
+import './styles/Merch-Content.css';
+
+// Fetch a random merch item
+const FetchMerch = async () => {
+    try {
+      const response = await axios.get('https://fakestoreapi.com/products/1')
+      .then(res=>res.json())
+      .then(json=>console.log(json))
+
+    }
+   catch (error) {
+    console.error("Error fetching videos:", error);
+    setError("Failed to fetch videos.");
+  }
+
+  return(
     <div className='product-display'>
       {error && <p>{error}</p>}
       {products.map((product) => (
