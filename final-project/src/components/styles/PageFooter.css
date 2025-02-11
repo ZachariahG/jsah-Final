@@ -6,10 +6,11 @@
         flex-direction: column;
         border: 3px solid white;
         justify-content: space-between;
+        
         padding-left: 8%;
         padding-right: 8%;
         width: 100%;
-        bottom: 0;
+        
     }
 }
 
@@ -22,6 +23,6 @@
     padding-left: 8%;
     padding-right: 8%;
     width: 100%;
-    bottom: 0;
+    
 }
 
