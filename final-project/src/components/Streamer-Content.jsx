@@ -41,7 +41,7 @@ const TwitchRandomStreamer = () => {
       setError("Access token not available yet.");
       return;
     }
- 
+
     try {
       const response = await axios.get("https://api.twitch.tv/helix/streams", {
         headers: {

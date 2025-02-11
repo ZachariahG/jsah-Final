@@ -9,13 +9,11 @@ import MainContentDisplayWindow from "../components/Main-Content-Window";
 
 const HomePage = () => {
     return (
-        <div>
+        <div className="main-container">
             <PageHeader/>
             <h1>Home</h1>
             <br />
             <div className="main-content">
-                <MainContentDisplayWindow />
-                <MainContentDisplayWindow />
                 <MainContentDisplayWindow />
                 <MainContentDisplayWindow />
             </div>
