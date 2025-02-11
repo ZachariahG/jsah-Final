@@ -3,7 +3,7 @@ import axios from 'axios';
 import ProductList from "./buttons/Add-To-Cart-Button";
 import './styles/Content-Window.css';
 import TwitchRandomStreamer from "./Streamer-Content";
-
+import { EpicReactions } from "./buttons/Emoji-Buttons";
 
 
 function MainContentDisplayWindow() {
@@ -67,6 +67,7 @@ function MainContentDisplayWindow() {
                 <ProductList />
                 <div className="save-for-later-button">Save for later button</div>
                 <div className="remove-from-cart-button">Remove from cart button</div>
+                <div><EpicReactions /> </div>
             </div>
         </div>
     );
