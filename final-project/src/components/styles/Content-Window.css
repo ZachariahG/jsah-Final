@@ -13,7 +13,7 @@
         background: linear-gradient(135deg, rgb(80, 190, 233), rgb(255, 28, 122));
         min-width: 550px;
         max-width: 550px;
-        height: 100%;
+        height: auto;
     }
 
     /* .product-title{
@@ -21,16 +21,17 @@
     } */
     
 
-.content-body {
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgb(80, 190, 233);
-    border-right: 1px solid rgb(80, 190, 233);
-    border-top: 1px solid rgb(255, 28, 122);
-    border-left: 1px solid rgb(255, 28, 122);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    background: linear-gradient(135deg, rgb(80, 190, 233), rgb(255, 28, 122));
+    .content-body {
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgb(80, 190, 233);
+        border-right: 1px solid rgb(80, 190, 233);
+        border-top: 1px solid rgb(255, 28, 122);
+        border-left: 1px solid rgb(255, 28, 122);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        background: linear-gradient(135deg, rgb(80, 190, 233), rgb(255, 28, 122));
+    }
 }
 
 /* This is for Desktop */
@@ -48,7 +49,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 100%;
+        height: auto;
     }
 
     .main-content {
