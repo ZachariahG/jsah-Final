@@ -19,8 +19,6 @@ const CartPage = () => {
                     <div className="content-container">
                         <MainContentDisplayWindow/>
                         <MainContentDisplayWindow/>
-                        <MainContentDisplayWindow/>
-                        <MainContentDisplayWindow/>
                     </div>
                 </div>
                 <div className="saved-items-main">
