@@ -20,8 +20,6 @@ function MainContentDisplayWindow() {
         <div className="merch-main">
             <div className="content-buttons">
                 <ProductList />
-                <div className="save-for-later-button">Save for later button</div>
-                <div className="remove-from-cart-button">Remove from cart button</div>
             </div>
         </div>
         
@@ -33,8 +31,6 @@ function MainContentDisplayWindow() {
         <div className="content-body">
             <div className="content-buttons">
                 <ProductList />
-                <div className="save-for-later-button">Save for later button</div>
-                <div className="remove-from-cart-button">Remove from cart button</div>
             </div>
         </div>
     );

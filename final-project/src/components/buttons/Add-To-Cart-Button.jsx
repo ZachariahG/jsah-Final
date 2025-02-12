@@ -44,9 +44,13 @@ const FetchProducts = () => {
         {products.map((product) => (
           <li key={product.id}>
             <h2 className='product-title'>{product.title}</h2>
-            <img src={product.image} alt={product.title} />
-            <p>${product.price}</p>
+            <div className="cheese">
+              <img src={product.image} alt={product.title} />
+              <p>${product.price}</p>
+            </div>
             <button onClick={() => addToCart(product)}>Add to Cart</button>
+            <button>Save for Later</button>
+            <button>Remove from Cart</button>
           </li>
         ))}
       </ul>
