@@ -1,12 +1,22 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CartPage from "./pages/Cart";
-import HomePage from "./pages/Home";
-import SavedItemsPage from "./pages/Saved-Items";
 import AppRouter from "./routes/AppRouter";
 import mongoRouter from "./routes/MongoRouter";
+import express from "express";
+import dotenv from "dotenv";
 
-const App = () => ((<AppRouter />), (<mongoRouter />));
+dotenv.config();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+app.use("/api", mongoRouter);
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+
+const App = () => <AppRouter />;
 
 export default App;

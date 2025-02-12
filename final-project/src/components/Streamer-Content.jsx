@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './styles/Streamer-Content.css';
 import fetchMerch from "./Merch-Content";
+import mongoRouter from "../routes/MongoRouter";
  
 // Retrieve Twitch API client ID and secret from environment variables
 const CLIENT_ID = import.meta.env.VITE_REACT_APP_TWITCH_CLIENT_ID;

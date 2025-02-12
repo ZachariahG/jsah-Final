@@ -18,7 +18,7 @@ mongoRouter.post("/twitchUsers", async (req, res) => {
       await client.connect();
       const collection = client.db().collection("twitchUsers");
   
-      const newStreamer = req.body;
+       let newStreamer = req.body;
       const result = await collection.insertOne(newStreamer);
       
       res.status(201).json({ _id: result.insertedId, ...newStreamer });
