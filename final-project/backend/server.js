@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 const MONGODB_URI = process.env.MONGODB_URI;
 if (!MONGODB_URI) {
-  throw new Error("MONGO_URI not defined");
+  throw new Error("MONGODB_URI not defined");
 }
 const client = new MongoClient(process.env.MONGODB_URI);
 const PORT = process.env.PORT || 5000;
@@ -31,8 +31,7 @@ mongoRouter.get("/one", async (req, res) => {
   try {
     await client.connect();
     const collection = client.db().collection("one");
-
-    const result = await client.db().collection("one").find().toArray();
+    const result = await client.db().collection.find({}).toArray();
 
     res.status(201).json(result);
   } catch (error) {
