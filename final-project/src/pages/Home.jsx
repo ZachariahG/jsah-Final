@@ -11,7 +11,6 @@ const HomePage = () => {
     return (
         <div className="main-container">
             <PageHeader/>
-            <h1>Home</h1>
             <br />
             <div className="main-content">
                 <MainContentDisplayWindow />
