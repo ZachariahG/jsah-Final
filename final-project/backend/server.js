@@ -29,10 +29,10 @@ const errorResponse = (error, res) => {
   res.status(500).json({ message: "Internal Server Error" });
 };
 
-mongoRouter.post("/twitchUsers", async (req, res) => {
+mongoRouter.post("/streams", async (req, res) => {
   try {
     await client.connect();
-    const collection = client.db().collection("twitchUsers");
+    const collection = client.db().collection("streams");
 
     const newStreamer = req.body;
     const result = await collection.insertOne(newStreamer);

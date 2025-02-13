@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-import newStreamer from "./StreamerObject";
+import newStreamer from "./Streamer-Object";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -14,7 +14,7 @@ const errorResponse = (error) => {
 const addNewStreamer = async () => {
   try {
     await client.connect();
-    const collection = client.db().collection("TwitchStreamers");
+    const collection = client.db().collection("streams");
     const result = await collection.insertOne(newStreamer);
 
     return { _id: result.insertedId, ...newStreamer };
