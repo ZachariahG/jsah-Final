@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import axios from "axios";
-import sayHello from "./Hello";
 
 const CLIENT_ID = import.meta.env.VITE_REACT_APP_TWITCH_CLIENT_ID;
 const CLIENT_SECRET = import.meta.env.VITE_REACT_APP_TWITCH_API_TOKEN;
@@ -80,7 +79,6 @@ function SearchBar() {
         onChange={(e) => setQuery(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
-      <button onClick={sayHello}>Say Hi</button>
       {error && <p style={{ color: "red" }}>{error}</p>}
 
       <ul>
