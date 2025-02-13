@@ -27,13 +27,14 @@ const errorResponse = (error, res) => {
   res.status(500).json({ message: "Internal Server Error" });
 };
 
-mongoRouter.get("/one", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
     await client.connect();
     const collection = client.db().collection("one");
-    const result = await client.db().collection.find({}).toArray();
+    const result = await collection.find({}).toArray();
 
-    res.status(201).json(result);
+    res.status(200).json(result);
+    // console.log(result);
   } catch (error) {
     errorResponse(error, res);
   } finally {
@@ -45,6 +46,10 @@ mongoRouter.get("/one", async (req, res) => {
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+// });
+
+// app.get("/", (req, res) => {
+//   res.send("Welcome to the backend!");
 // });
 
 app.listen(PORT, () => {

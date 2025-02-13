@@ -32,6 +32,7 @@ function MainContentDisplayWindow() {
             <div className="content-buttons">
                 <ProductList />
             </div>
+            
         </div>
     );
 }
