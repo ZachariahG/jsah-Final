@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar";
 import HomeButton from "./buttons/Home-Button";
 import CartButton from "./buttons/Cart-Button";
 import SavedItemsButton from "./buttons/Saved-Items-Button";
+import SecretButton from "./buttons/Secret-Button";
 
 
 function PageHeader () {
@@ -44,6 +45,7 @@ function PageHeader () {
             <div className={menu_class}>
                 <SavedItemsButton/>
                 <CartButton/>
+                <SecretButton/>
             </div>
             <div className="search-bar">
                     <SearchBar/>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import HomeButton from "./buttons/Home-Button";
 
 const Hello = () => {
   const [data, setData] = useState([]); // Store fetched data
@@ -33,9 +34,13 @@ const Hello = () => {
       <header>
         <h1 style={{ color: "cornflowerblue" }}>SECRET TUNNNELLLL</h1>
       </header>
+      <br />
 
-      <button style={{ color: "cornflowerblue" }} onClick={handleFetchData}>
-        {loading ? "Loading..." : "SECRET SECRET SECRET"}
+      <button
+        style={{ color: "black", fontSize: "20px" }}
+        onClick={handleFetchData}
+      >
+        {loading ? "Loading..." : "🧀 SECRET SECRET SECRET 🧀 "}
       </button>
       <br />
       <br />
@@ -54,6 +59,14 @@ const Hello = () => {
           <pre style={{ color: "orange", fontSize: "35px" }}>
             {JSON.stringify(data, null, 2)}
           </pre>
+          <div>
+            <br />
+            <p style={{ fontSize: "30px" }}>
+              ....Okay, go back to {" "}
+            </p>
+            <br />
+            <HomeButton />{" "}
+          </div>
         </div>
       )}
     </div>
