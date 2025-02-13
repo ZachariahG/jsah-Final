@@ -1,0 +1,28 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "esbuild": "^0.24.2",
+    "express": "^4.21.2",
+    "mongodb": "^6.13.0",
+    "nanoid": "^3.3.8",
+    "picocolors": "^1.1.1",
+    "postcss": "^8.5.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rollup": "^4.34.6",
+    "scheduler": "^0.25.0",
+    "source-map-js": "^1.2.1",
+    "vite": "^6.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
